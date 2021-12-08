@@ -1,0 +1,5 @@
+DB_URL: 'jdbc:postgresql://localhost:5432/postgres'
+DB_USER: 'postgres'
+DB_PASSWORD: '123321'
+driver: 'org.postgresql.Driver'
+basePackage: 'ru.vsu.plannerbackendv2'
