@@ -22,8 +22,8 @@ public class Application {
 
     public static ApplicationContext getContext() {
         if (context == null) {
-            context = run(new String[]{parser.parseMaps("application.yaml").get("basePackege").toString()},
-                    Map.of(Map.class, Set.of(HashMap.class)), "application.yaml");
+            context = run(new String[]{parser.parseMaps("application.yaml").get("basePackage").toString()},
+                    new HashMap<>(){{put(Map.class, Set.of(HashMap.class));}}, "application.yaml");
         }
         return context;
     }

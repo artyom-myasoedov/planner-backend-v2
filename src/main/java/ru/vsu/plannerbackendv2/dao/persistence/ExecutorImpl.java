@@ -37,7 +37,7 @@ public class ExecutorImpl implements Executor {
             conditions.forEach(it -> sb.append(it.toSQL()));
         }
         sb.append(";");
-        if (!firstWord.equals("SELECT")) {
+        if (!firstWord.equals("SELECT") && sb.toString().contains("AND")) {
             sb.replace(sb.indexOf("AND "), sb.indexOf("AND ") + 4, "");
         }
         var query = sb.toString();

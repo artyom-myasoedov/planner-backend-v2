@@ -15,8 +15,7 @@ public class ClassScanner {
     private static final String CLASS_FILE_SUFFIX = ".class";
 
     public Set<Class<?>> findClasses(String scannedPackage) {
-        String scannedPath = String.valueOf(ClassLoader
-                        .getSystemClassLoader()
+        String scannedPath = String.valueOf(ClassScanner.class.getClassLoader()
                         .getResource(scannedPackage.replace(PKG_SEPARATOR, DIR_SEPARATOR)))
                 .replaceAll("libs[\\w\\W]*!", "classes/java/main")
                 .replaceAll("jar:", "");
